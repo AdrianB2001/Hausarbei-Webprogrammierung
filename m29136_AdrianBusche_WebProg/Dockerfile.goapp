@@ -1,0 +1,18 @@
+
+FROM golang:latest AS build
+
+WORKDIR /m29136_AdrianBusche_WebProg
+COPY ./main.go .
+RUN mkdir -p vendor
+COPY go.mod .
+COPY go.sum .
+RUN go mod vendor
+RUN go build -o webprog main.go
+
+FROM debian
+WORKDIR /app
+COPY static/ static/
+COPY templates/ templates/
+COPY --from=build /m29136_AdrianBusche_WebProg/webprog .
+EXPOSE 8080
+CMD ["/app/webprog"]

@@ -1,0 +1,20 @@
+{{define "index"}}
+<html lang="de" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Portfolio</title>
+        <meta name="author" content="Adrian Busche" />
+        <meta name="description" content="Diese seite wurde fuer die Abgabe in Webprogrammierung im WiSe 2022/23 erstellt." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/stylesheets/css/style.css">
+        <link rel="stylesheet" href="../static/stylesheets/css/reset.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="../static/stylesheets/js/jquery.lazy.min.js"></script>
+
+    </head>
+
+{{ template "Content" . }}
+
+</html>
+
+{{ end }}

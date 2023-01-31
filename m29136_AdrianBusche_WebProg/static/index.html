@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Portfolio</title>
+        <meta name="author" content="Adrian Busche" />
+        <meta name="description" content="Diese seite wurde fuer die Abgabe in Webprogrammierung im WiSe 2022/23 erstellt." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./stylesheets/css/style.css">
+        <link rel="stylesheet" href="./stylesheets/css/reset.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="./stylesheets/js/jquery.lazy.min.js"></script>
+
+    </head>
+    <body>
+        <div class="wrapper"><!--WRAPPER-->
+
+            <header style="max-width: 100%;"><!-- HEADER -->
+
+                <h1>Adrian Busche</h1>   <!-- H1 Überschrift-->
+
+                <img class="top-img" src="./assets/img/bild_hafen.jpg" width="100%" height="auto"> <!-- Bild -->
+                
+                <nav class="wrapper">
+                    <div id="hamburger" onclick="toggleNav(this)">  <!-- implementierung des Hamburger-Menus -->
+                        <div class="hamburger-inner"></div>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="#mich">Über mich</a></li>
+                        <li><a href="#Fotografie">Fotografie</a></li>
+                        <li><a href="#Mediengestaltung">Mediengestaltung</a></li>
+                        <li><a href="#Sounddesign">Sounddesign</a></li>
+                        <li><a href="#Sonstiges">Sonstiges</a></li>
+                        <li><a href="#Impressum">Impressum</a></li>
+                    </ul>
+                   
+                </nav>
+
+            </header>
+            <!-- HEADER END -->
+
+            <!-- MAIN -->
+            <main>
+                <!-- Unterüberschrift -->
+                <h2 id="mich">Programmierer, Designer, Fotograf...</h2>
+                
+                <!--PORTFOLIO-->
+                <section class="portfolio">
+
+                    <div class="tile1">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bild_2.jpg">
+                        </div>
+                    </div>
+
+                    <div class="tile1">
+                        <div class="text">
+                            <p>
+                                Mein Name ist Adrian Busche und ich studiere zurzeit Medieninformatik an der Hochschule Harz in Wernigerode. 
+                                In diesem Studiengang lerne ich nicht nur verschiedene Programmiersprachen, sondern auch diverse designtechnische Dinge. 
+                                Dazu gehören unter anderem Grafikdesign, Fotografie, Filmtechnik und -schnitt oder auch Sounddesign. 
+                                In diesem Portfolio zeige ich ein paar meiner Kreationen die teilweise im Zuge meines Studiums, aber auch außerhalb der Studienzeit entstanden sind.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile1">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bild_1.jpg">
+                        </div>
+                    </div>
+
+                </section><!--PORTFOLIO-->
+
+                <!-- Map -->
+                <div id="mapdiv"></div>
+                
+                <!-- Text -->
+                <div class="text">
+                    <p>Mein Zuhause</p>
+                </div>
+
+                <!-- Unterüberschrift -->
+                <h2 id="Fotografie">Fotografie</h2>
+                
+                <!-- Bild -->
+                    <div class="tile" >
+                        <div class="picture">
+                            <img class="lazy" data-src="./assets/img/bild_grashuepfer.jpg">
+                        </div>
+                    </div>
+                   
+                <!-- PORTFOLIO -->
+                <section class="portfolio">
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bild_3.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="tile">
+                        <div class="text">
+                            Im bereich der Fotografie habe ich vor meinem Studium nicht viele Erfahrungen gesammelt, da ich nie eine gute Kamera besessen habe. 
+                            Jedoch hat ich im laufe der Zeit bei mir ein Interesse daran entwickelt weswegen ich immer öfter meine Handykamera hervor hole, wenn ich ein Interessantes Motiv sehe.
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bild_4.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bass_1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bass_2.jpg">
+                            <p>Fotoserie einer Bassguitarre</p>
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bass_3.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/london_1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/london_2.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/london_3.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/bild.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="tile">
+                        <div class="text">
+                            In den meisten Fällen mache ich Landschafts- oder Naturfotos aber ich fotografiere auch gerne verschiedenste Objekte.
+                            Natürlich Fotografiere ich auch wie die meisten auch viel im Urlaub. Nur Portraits mache ich eher selten.
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/london_0.jpg">
+                        </div>
+                    </div>
+                </section> <!-- PORTFOLIO -->
+
+                <h2 id="Mediengestaltung">Mediengestaltung</h2> <!-- Unterüberschrift -->
+
+                <!-- PORTFOLIO -->
+                <section class="portfolio" >
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/Plakat_1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="tile">
+                        <div class="text">
+                            <p>Im Fach Mediengestaltung habe ich einiges über die Grundlagen des Designens gelernt.
+                                Im Zuge dieses Kurses habe ich unter anderem Filmplakate und ein Coorperate Design eines Weingutes entwurfen.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bild -->
+                    <div class="tile">
+                        <div class="pic">
+                            <img class="lazy" data-src="./assets/img/Plakat_2.jpg">
+                        </div>
+                    </div>
+                </section> <!-- PORTFOLIO -->
+
+                <!-- Bild -->
+                <div class="tile">
+                    <div class="picture">
+                        <img class="lazy" data-src="./assets/img/Weinflaschen.jpg">
+                    </div>
+                </div>
+                
+                <h2 id="Sounddesign">Sounddesign</h2> <!-- Unterüberschrift -->
+
+                <!-- Portfolio -->
+                <section class="portfolio" >
+
+                    <!-- Video -->
+                    <div class="tile">
+                        <div class="video">
+                            <video id="video" controls preload="metadata">
+                                <source src="./assets/video/ufo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="tile">
+                        <div class="text">
+                            <p>
+                                Auch im bereich Sounddesign habe ich in meinem Studium vieles gelernt.
+                                Zum einen habe ich durch Sounds eine Alienentführung dargestellt und zum anderen habe ich ein eingesprochenes Gedicht mit Geräuschen untermahlt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="tile">
+                        <div class="video">
+                            <video id="video" controls preload="metadata">
+                                <source src="./assets/video/gedicht.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section> <!-- PORTFOLIO -->
+
+                <h2 id="Sonstiges">Sonstiges</h2> <!-- Unterüberschrift -->
+
+                <!-- PORTFOILIO -->
+                <section class="portfolio" >
+
+                    <!-- Text -->
+                    <div class="tile">
+                        <div class="text">
+                            Ich habe mich, ausserhalb meines Studiums, vor einiger Zeit auch einmal daran versucht Clips die ich beim Zocken Aufgenommen habe, zu schneiden und zu bearbeiten.
+                        </div>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="tile">
+                        <div class="video">
+                            <iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/healHY7HGew"
+                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </section> <!-- PORTFOLIO -->
+
+            </main>
+            <!-- MAIN END -->
+
+            <!-- FOOTER mit Impressum -->
+            <footer>
+                <div class="impressum" id="Impressum">
+                    <h2>Impressum</h2>
+                    <p>Angaben gemäß § 5 TMG</p>
+                    <p>Adrian Busche <br>
+                    Minslebener Str. 8<br>
+                    38895 Derenburg <br>
+                    </p>
+                    <p></p>
+                    <p><strong>Kontakt:</strong> <br>
+                    Instagram: <a href="https://www.instagram.com/adrian_warte_noch_busche/?hl=de">Adrian Busche</a><br>
+                    Youtube: <a href="https://www.youtube.com/channel/UCsNwfEmQl_Ltv5q2acoSaug">Avien01</a><br>
+                    E-Mail: <a href='mailto:adrian.busche@gmx.de'>adrian.busche@gmx.de</a></br>
+                    Verantwortlich für den Inhalt nach § 55 Abs. 2 RstV</p>
+                </div>
+            </footer><!-- FOOTER END -->
+
+        </div><!--WRAPPER END-->
+
+        <script src="stylesheets/js/main.js" charset="utf-8"></script>
+
+        <!-- Map -->
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+        <script>
+          map = new OpenLayers.Map("mapdiv");
+          map.addLayer(new OpenLayers.Layer.OSM());
+
+          var lonLat = new OpenLayers.LonLat( 10.9053713, 51.87095 )
+                .transform(
+                  new OpenLayers.Projection("EPSG:4326"), // Transformation aus dem Koordinatensystem WGS 1984
+                  map.getProjectionObject() // in das Koordinatensystem 'Spherical Mercator Projection'
+                );
+
+          var zoom=17;
+
+          var markers = new OpenLayers.Layer.Markers( "Markers" );
+          map.addLayer(markers);
+
+          markers.addMarker(new OpenLayers.Marker(lonLat));
+
+          map.setCenter (lonLat, zoom);
+        </script>
+
+
+        <!-- Lazy-Loading -->
+        <script>
+            $(function() {
+                $('.lazy').lazy({
+                    scrollDirection: 'vertical',
+                    effect: 'fadeIn',
+                    effectTime: 2000
+                });
+            });
+        </script>
+
+    </body>
+</html>

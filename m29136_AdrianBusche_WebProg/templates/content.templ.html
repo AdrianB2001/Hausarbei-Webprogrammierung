@@ -1,0 +1,92 @@
+{{define "Content"}}
+
+<body>
+    <div class="wrapper"><!--WRAPPER-->
+        
+           <header style="max-width: 100%;"><!-- HEADER -->
+
+               <h1>Adrian Busche</h1>   <!-- H1 Überschrift-->
+               
+               <img class="top-img" src="../static/assets/img/bild_hafen.jpg" width="100%" height="auto"> <!-- Bild -->
+               
+               <nav class="wrapper">
+                   <div id="hamburger" onclick="toggleNav(this)">  <!-- implementierung des Hamburger-Menus -->
+                       <div class="hamburger-inner"></div>
+                   </div>
+                   <ul class="menu">
+                       <li><a href="#mich">Über mich</a></li>
+                       <li><a href="#Fotografie">Fotografie</a></li>
+                       <li><a href="#Mediengestaltung">Mediengestaltung</a></li>
+                       <li><a href="#Sounddesign">Sounddesign</a></li>
+                       <li><a href="#Sonstiges">Sonstiges</a></li>
+                       <li><a href="#Impressum">Impressum</a></li>
+                   </ul>
+                  
+               </nav>
+
+           </header>
+           <!-- HEADER END -->
+
+           {{range .allSections}}
+           {{.Content}}
+           {{end}}
+           
+
+           <!-- FOOTER mit Impressum -->
+           <footer>
+               <div class="impressum" id="Impressum">
+                   <h2>Impressum</h2>
+                   <p>Angaben gemäß § 5 TMG</p>
+                   <p>Adrian Busche <br>
+                   Minslebener Str. 8<br>
+                   38895 Derenburg <br>
+                   </p>
+                   <p></p>
+                   <p><strong>Kontakt:</strong> <br>
+                   Instagram: <a href="https://www.instagram.com/adrian_warte_noch_busche/?hl=de">Adrian Busche</a><br>
+                   Youtube: <a href="https://www.youtube.com/channel/UCsNwfEmQl_Ltv5q2acoSaug">Avien01</a><br>
+                   E-Mail: <a href='mailto:adrian.busche@gmx.de'>adrian.busche@gmx.de</a></br>
+                   Verantwortlich für den Inhalt nach § 55 Abs. 2 RstV</p>
+               </div>
+           </footer><!-- FOOTER END -->
+
+       </div><!--WRAPPER END-->
+
+       <script src="../static/stylesheets/js/main.js" charset="utf-8"></script>
+
+       <!-- Map -->
+       <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+       <script>
+         map = new OpenLayers.Map("mapdiv");
+         map.addLayer(new OpenLayers.Layer.OSM());
+
+         var lonLat = new OpenLayers.LonLat( 10.9053713, 51.87095 )
+               .transform(
+                 new OpenLayers.Projection("EPSG:4326"), // Transformation aus dem Koordinatensystem WGS 1984
+                 map.getProjectionObject() // in das Koordinatensystem 'Spherical Mercator Projection'
+               );
+
+         var zoom=17;
+
+         var markers = new OpenLayers.Layer.Markers( "Markers" );
+         map.addLayer(markers);
+
+         markers.addMarker(new OpenLayers.Marker(lonLat));
+
+         map.setCenter (lonLat, zoom);
+       </script>
+
+
+       <!-- Lazy-Loading -->
+       <script>
+           $(function() {
+               $('.lazy').lazy({
+                   scrollDirection: 'vertical',
+                   effect: 'fadeIn',
+                   effectTime: 2000
+               });
+           });
+       </script>
+</body>
+
+{{ end }}

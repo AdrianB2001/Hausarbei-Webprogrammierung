@@ -1,0 +1,26 @@
+version: '3'
+services:
+  gomdb :
+    image: mongo:latest
+    container_name: gomdb
+    restart: always
+    environment :
+      MONGO_INITDB_ROOT_USERNAME : root
+      MONGO_INITDB_ROOT_PASSWORD : rootpassword
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+
+  goapp:
+    image: webprog:latest
+    container_name: goapp
+    depends_on:
+      - "gomdb"
+    build:
+      context: .
+      dockerfile: Dockerfile.goapp
+    ports:
+      - 8080:8080
+volumes:
+  mongodb_data_container :
